@@ -17,6 +17,9 @@
      <a-asset-item id="CCM" src="https://raw.githubusercontent.com/WitchLord/42labs.github.io/master/CCM/scene.gltf"> </a-asset-item>
     </a-assets>
   
+  <a-asset-item id="PR" src="https://raw.githubusercontent.com/WitchLord/42labs.github.io/master/CCM/Persona/scene.gltf"> </a-asset-item>
+    </a-assets>
+  
     <a-marker preset="kanji">
       <a-entity gltf-model="#Logo"
                 position="-0.5 0.5 0.5" 
@@ -28,11 +31,17 @@
    
    <a-marker type="pattern" url="https://raw.githubusercontent.com/WitchLord/42labs.github.io/master/42Labs.patt">
       <a-entity gltf-model="#CCM"
-                position="0.0 0.0 0.0"
+                position="0.0 1.0 0.0"
                 rotation= "90 0 0"
-                scale="0.03 0.03 0.03" 
+                scale="0.02 0.02 0.02" 
                 animation-mixer="clip: Take 001;"
                 crossorigin="anonymous"></a-entity>  
+     
+     <a-entity gltf-model="#PR"
+                position="0.0 0.0 2"
+                rotation= "-90 0 0"
+                scale="0.02 0.02 0.02" 
+                ></a-entity>
     
    </a-marker>
    
