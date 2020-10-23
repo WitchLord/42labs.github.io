@@ -1,77 +1,44 @@
 <html>
 <head>
+   <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
   <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
   <script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
-  <script src="https://cdn.rawgit.com/donmccurdy/aframe-extras/v3.10.0/dist/aframe-extras.min.js"></script>
+  <script src="https://cdn.rawgit.com/donmccurdy/aframe-extras/v3.10.0/dist/aframe-extras.min.js">
+   </script>
+     <script src="https://unpkg.com/aframe-animation-component@5.1.2/dist/aframe-animation-component.min.js"></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+   <style>
+       .a-enter-vr-button
+       {
+           background:none;
+       }
+   </style>
 
 </head>
 
 <body>
   <a-scene arjs="debugUIEnabled: false;">
-    
 
-    <a-assets>
+     <a-assets>
       <a-asset-item id="Logo" src="https://raw.githubusercontent.com/WitchLord/WebAR_Logo/master/Models/scene.gltf"></a-asset-item>
     </a-assets>
      
-     <a-asset-item id="CCM" src="https://raw.githubusercontent.com/WitchLord/42labs.github.io/master/CCM/scene.gltf"> </a-asset-item>
-    </a-assets>
-  
-  <a-asset-item id="PR" src="https://raw.githubusercontent.com/WitchLord/42labs.github.io/master/CCM/Persona/scene.gltf"> </a-asset-item>
-    </a-assets>
-  
-    <a-marker preset="kanji">
+     <a-marker type="pattern" url="https://raw.githubusercontent.com/42LabsCS/InviteRA.github.io/main/pattern-42Labs_Cube.patt">
       <a-entity gltf-model="#Logo"
-                position="-0.5 0.5 0.5" 
-                scale="0.03 0.03 0.03"
-                rotation="0 90 0"
-                animation-mixer="clip: Take 001;"
-                crossorigin="anonymous"></a-entity>  
-    
-   </a-marker>
-   
-   <a-marker type="pattern" url="https://raw.githubusercontent.com/WitchLord/42labs.github.io/master/42Labs.patt">
-      <a-entity gltf-model="#CCMI"
-                position="0.0 1.0 0.0"
-                rotation= "0 0 0"
+                position="0 0 0"
+                rotation="-90 0 0"
                 scale="0.02 0.02 0.02" 
                 animation-mixer="clip: Take 001;"
                 crossorigin="anonymous"></a-entity>  
+      
      
-     <a-entity gltf-model="#PR2"
-                position="0.0 0.0 2"
-                rotation= "0 0 0"
-                scale="0.02 0.02 0.02" 
-                ></a-entity>
-     
-     <a-entity gltf-model="#Logo"
-                position="-0.5 0.5 0.5" 
-                scale="0.02 0.02 0.02"
-               rotation="-90 0 0"
-                animation-mixer="clip: Take 001;"
-                crossorigin="anonymous"></a-entity>
-    
    </a-marker>
-   
+     
+     
    <a-entity camera></a-entity>
   </a-scene>
-    
-  <!--    
-    <a-assets>
-      <a-asset-item id="Logo" src="https://raw.githubusercontent.com/WitchLord/3M_ARProduct/master/Models/scene.gltf"></a-asset-item>
-    </a-assets>
-  
-    -- <a-marker preset="kanji">
-    <a-marker type="pattern" url="https://raw.githubusercontent.com/WitchLord/42labs.github.io/master/Models/pattern-marker.patt">
-      <a-entity gltf-model="#Logo" 
-                scale="0.1 0.1 0.1"
-                animation-mixer="clip: Take 001;"
-                crossorigin="anonymous"></a-entity>
-  
-    </a-marker>
-    <a-entity camera></a-entity>
-  </a-scene>
--->
+   
 </body>
 </html>
 
