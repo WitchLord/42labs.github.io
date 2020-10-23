@@ -21,14 +21,14 @@
   <a-scene arjs="debugUIEnabled: false;">
 
      <a-assets>
-      <a-asset-item id="Logo" src="https://raw.githubusercontent.com/WitchLord/WebAR_Logo/master/Models/scene.gltf"></a-asset-item>
+      <a-asset-item id="Logo" src="https://raw.githubusercontent.com/WitchLord/42labs.github.io/master/Models/scene.gltf"></a-asset-item>
     </a-assets>
      
      <a-marker type="pattern" url="https://raw.githubusercontent.com/42LabsCS/InviteRA.github.io/main/pattern-42Labs_Cube.patt">
       <a-entity gltf-model="#Logo"
-                position="0 0 0.5"
+                position="0 0 0"
                 rotation="-90 0 0"
-                scale="0.02 0.02 0.02" 
+                scale="0.1 0.1 0.1" 
                 animation-mixer="clip: Take 001;"
                 crossorigin="anonymous"></a-entity>  
       
@@ -38,7 +38,6 @@
      
    <a-entity camera></a-entity>
   </a-scene>
-   
 </body>
 </html>
 
