@@ -1,0 +1,50 @@
+<html>
+<head>
+   <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+  <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
+  <script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
+  <script src="https://cdn.rawgit.com/donmccurdy/aframe-extras/v3.10.0/dist/aframe-extras.min.js">
+   </script>
+     <script src="https://unpkg.com/aframe-animation-component@5.1.2/dist/aframe-animation-component.min.js"></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+   <style>
+       .a-enter-vr-button
+       {
+           background:none;
+       }
+   </style>
+
+</head>
+
+<body>
+  <a-scene arjs="debugUIEnabled: false;">
+
+     <a-assets>
+      <a-asset-item id="Logo" src="https://raw.githubusercontent.com/WitchLord/WebAR_Logo/master/Models/scene.gltf"></a-asset-item>
+    </a-assets>
+     
+     <a-marker type="pattern" url="https://raw.githubusercontent.com/42LabsCS/InviteRA.github.io/main/pattern-42Labs_Cube.patt">
+      <a-entity gltf-model="#Logo"
+                position="0 0 0.5"
+                rotation="-90 0 0"
+                scale="0.02 0.02 0.02" 
+                animation-mixer="clip: Take 001;"
+                crossorigin="anonymous"></a-entity>  
+      
+     
+   </a-marker>
+     
+     
+   <a-entity camera></a-entity>
+  </a-scene>
+   
+</body>
+</html>
+
+<!-- AR.JS with A-Frame documentation: https://aframe.io/blog/arjs/
+       Step by step AR with A-Frame:
+       -->
+
+<!-- Hiro image https://jeromeetienne.github.io/AR.js/data/images/HIRO.jpg.
+ Just show it to the camera and the image will appear -->
